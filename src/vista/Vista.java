@@ -17,7 +17,7 @@ import negocio.Controlador;
 
 /**
  *
- * @author Sala_04
+ * @author CAMILO
  */
 public class Vista extends JFrame implements ActionListener {
 
@@ -37,13 +37,12 @@ public class Vista extends JFrame implements ActionListener {
     FlowLayout estilo;
     Controlador control;
 
-    public Vista() {
-    }
-
+    //Metodo contructor
     public Vista(int x, int y) {
         crearVista(x, y);
     }
 
+    //Creación del Frame
     public void crearVista(int x, int y) {
         this.setTitle("Expresiones regulares");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -55,6 +54,7 @@ public class Vista extends JFrame implements ActionListener {
         this.setVisible(true);
     }
 
+    //Creacion de los botones y su estilo
     public void crear() {
         jPanel1 = new JPanel();
         jb1 = new JButton();
@@ -186,6 +186,7 @@ public class Vista extends JFrame implements ActionListener {
         control = new Controlador();
     }
 
+    //Insertar los botones, y cuadros de texto al Frame
     void insertar() {
         jPanel1.add(jb1);
         jPanel1.add(jb2);
@@ -202,10 +203,11 @@ public class Vista extends JFrame implements ActionListener {
         this.add(jPanel1);
     }
 
+    //Accion de los botones
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == jb1) {
-            control.validar(jt1.getText(),jt2.getText(),jt3.getText(),jt4.getText(),jt5.getText());
+            control.validar(jt1.getText(), jt2.getText(), jt3.getText(), jt4.getText(), jt5.getText());
         } else {
             if (e.getSource() == jb2) {
                 control.salir();

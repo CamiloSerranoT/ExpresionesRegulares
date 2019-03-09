@@ -5,11 +5,9 @@
  */
 package negocio;
 
-import vista.Vista;
-
 /**
  *
- * @author Sala_04
+ * @author CAMILO
  */
 public class Controlador {
     
@@ -17,6 +15,7 @@ public class Controlador {
         
     }
 
+    //Metodo en donde establece los datos a manejar, y acciona el metodo de comprobacion
     public void validar(String entero,String real,String notCien,String binario, String email){
         Modelo modelo = new Modelo();
         modelo.setEntero(entero);
@@ -28,6 +27,7 @@ public class Controlador {
         modelo.analizador();
     }
     
+    //Cierre del Frame
     public void salir(){
         System.exit(0);
     }

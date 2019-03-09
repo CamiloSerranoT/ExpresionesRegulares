@@ -7,7 +7,7 @@ package vista;
 
 /**
  *
- * @author Sala_04
+ * @author CAMILO
  */
 public class ClaseDePrueba {
 

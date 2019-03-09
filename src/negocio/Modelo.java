@@ -74,6 +74,7 @@ public class Modelo {
         this.lugarArreglo = lugarArreglo;
     }
 
+    //Metodo contructor
     public Modelo() {
         this.entero = "";
         this.real = "";
@@ -84,6 +85,7 @@ public class Modelo {
         this.invalidos = 0;
     }
 
+    //Metodo principal, que valida y hace las diferentes acciones
     public void analizador() {
         boolean[] cont = new boolean[tamaño];
         String[] imp = new String[tamaño];
@@ -105,12 +107,14 @@ public class Modelo {
 
     }
 
+    //Busca en el frase, los diferentes caracteres requeridos o pedidos
     private Matcher fraseCompleta(String buscar, String frase) {
         Pattern busqueda = Pattern.compile(buscar);
         Matcher palabra = busqueda.matcher(frase);
         return palabra;
     }
 
+    //Valida si el campo de texto esta vacio, o no
     private boolean busPalabra(String patron, String cadena) {
         boolean comprobar = false;
         if (fraseCompleta(patron, cadena).matches()) {
